@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <p class="glry">Galery:</p>
+    <div class="containerstory">
+    <p class="story">Our Love story</p>
+  </div>
+    <div class="container-foto">
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="foto 12.jpg" class="foto-galeri" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="foto 10.jpg" class="foto-galeri" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <Img src="foto 11.jpg" class="foto-galeri" style="width: 100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="foto 9.jpg" class="foto-galeri" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="foto 14.jpg" class="foto-galeri" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="foto 12.jpg" class="gambar" style="width:100%" onclick="currentSlide(1)" alt="──── Dian & Naila ────">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto 10.jpg" class="gambar" style="width: 100%" onclick="currentSlide(2)" alt="──── Dian & Naila ────">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto 11.jpg" class="gambar" style="width:100%" onclick="currentSlide(3)" alt="──── Dian & Naila ────">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto 9.jpg" class="gambar" style="width:100%" onclick="currentSlide(4)" alt="──── Dian & Naila ────">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto 14.jpg" class="gambar" style="width:100%" onclick="currentSlide(5)" alt="──── Dian & Naila ────">
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+</script>
+
+<div class="musik">
+<audio id="background-music"autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+  <source src="music.ogg" type="audio/ogg">
+</div>
+</audio>
+<script>
+window.onload = function() {
+  const audio = document.getElementById('background-music');
+  const savedTime = localStorage.getItem('music-time');
+
+  if (savedTime) {
+    audio.currentTime = savedTime;
+  }
+
+  audio.addEventListener('timeupdate', function() {
+    localStorage.setItem('music-time', audio.currentTime);
+  });
+};
+</script>
+
+    <footer>
+        <a href="index.html"> <img src="Vector-home.svg" alt="cover" class="icon"></a>
+        <a href="btn-opening.html"><img src="ikon cover.svg" alt="home" class="icon"></a>
+        <a href="acara.html"><img src="vector-acara.svg" alt="acara" class="icon"></a>
+        <a href="lokasi.html"><img src="vector-lokasi.svg" alt="lokasi" class="icon"></a>
+        <div class="pilih"><img src="vector-galery.svg" alt="galery"  class="icon-choose"></div>
+        <a href="video.html"><img src="vector-video.svg" alt="video"   class="icon"></a>
+        <a href="rsvp.html"><img src="logo rsvp.svg" alt="rsvp" class="icon"></a>
+        <a href="penutup.html"><img src="vector-penutup.svg" alt="penutup" class="icon"></a>
+    </footer>
+</body>
+</html>

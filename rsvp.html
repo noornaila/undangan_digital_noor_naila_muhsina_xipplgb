@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-rsvp">
+    <div class="form-container">
+        <form class="rsvp-form" id="rsvpForm">
+            <h2>RSVP</h2>
+            <div class="input-group">
+                <label for="nama">Nama Tamu</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Tamu" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <label for="kehadiran">Konfirmasi Kehadiran</label>
+                <select id="kehadiran" name="kehadiran" required>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak_hadir">Tidak Hadir</option>
+                    <option values="mungkin_hadir">Mungkin Hadir</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="ucapan">Berikan Ucapan</label>
+                <textarea id="ucapan" name="ucapan" placeholder="Berikan Ucapan" required></textarea>
+            </div>
+            <button class="button-rsvp">Kirim</button>
+        </form>
+
+        <div class="ucapan-container">
+            <h3>Ucapan Tamu:</h3>
+            <ul id="ucapanList"></ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <a href="index.html"> <img src="Vector-home.svg" alt="cover" class="icon"></a>
+    <a href="btn-opening.html"><img src="ikon cover.svg" alt="home" class="icon"></a>
+    <a href="acara.html"><img src="vector-acara.svg" alt="acara" class="icon"></a>
+    <a href="lokasi.html"><img src="vector-lokasi.svg" alt="lokasi" class="icon"></a>
+    <a href="galery.html"><img src="vector-galery.svg" alt="galery"  class="icon"></a>
+    <a href="video.html"><img src="vector-video.svg" alt="video"   class="icon"></a>
+    <div class="pilih"><img src="logo rsvp.svg" alt="rsvp" class="icon-choose"></div>
+    <a href="penutup.html"><img src="vector-penutup.svg" alt="penutup" class="icon"></a>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

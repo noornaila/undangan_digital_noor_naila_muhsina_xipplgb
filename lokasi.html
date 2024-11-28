@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+</head>
+<body>
+    <P class="map">Lokasi Resepsi:</P>
+    <div class="mapssssss">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1991.608419683012!2d114.5877644!3d-3.2964133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a6c5ef9b61%3A0x6d05999c9548678b!2sGedung%20Serba%20Guna%20(GSG)%20Universitas%20Lambung%20Mangkurat%20Banjarmasin!5e0!3m2!1sid!2sid!4v1726535790179!5m2!1sid!2sid" width="80%" style="border:50;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<p class="unlm"><b>GSG Universitas Lambung Mangkurat.</b></p>
+    <p class="text"><i> No. Jalan unlam No.12  Pangeran, Kec. Banjarmasin Utara,<br> Kota Banjarmasin, Kalimantan Selatan 70123</i></p>
+   <div class="musik">
+    <audio id="background-music"autoplay loop>
+      <source src="music.mp3" type="audio/mpeg">
+      <source src="music.ogg" type="audio/ogg">
+    </div>
+  </audio>
+    <script>
+    window.onload = function() {
+      const audio = document.getElementById('background-music');
+      const savedTime = localStorage.getItem('music-time');
+    
+      if (savedTime) {
+        audio.currentTime = savedTime;
+      }
+    
+      audio.addEventListener('timeupdate', function() {
+        localStorage.setItem('music-time', audio.currentTime);
+      });
+    };
+    </script>
+
+    <footer>
+        <a href="index.html"> <img src="Vector-home.svg" alt="cover" class="icon"></a>
+        <a href="btn-opening.html"><img src="ikon cover.svg" alt="home" class="icon"></a>
+        <a href="acara.html"><img src="vector-acara.svg" alt="acara" class="icon"></a>
+        <div class="pilih"><div class="pilih"><img src="vector-lokasi.svg" alt="lokasi" class="icon-choose"></div></div>
+        <a href="galery.html"><img src="vector-galery.svg" alt="galery"  class="icon"></a>
+        <a href="video.html"><img src="vector-video.svg" alt="video"   class="icon"></a>
+        <a href="rsvp.html"><img src="logo rsvp.svg" alt="rsvp" class="icon"></a>
+        <a href="penutup.html"><img src="vector-penutup.svg" alt="penutup" class="icon"></a>
+    </footer>
+
+</body>
+</html>

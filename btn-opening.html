@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p class="salam">Assalamu'alaikum Warahmatullahi <br> Wabarakatuh</p>
+    <p class="pembuka">
+        Dengan Memohon ridho dan rahmat Allah SWT. <br> Kami mengharapkan kehadiran bapak/ibu/saudara/i <br> Pada acara pernikahan putra & putri kami </p>
+    <div class="gambar-1">
+        <img src="gambar-Group-1.png" alt="gambar-1">
+    </div>
+        <p class="nama-pr">Naila</p>
+    <p class="putri">
+    Binti Masnadianoor <br> Bin Mastur </p>
+    <p class="dan">&</p>
+
+    <div class="gambar-2">
+        <img src="gambar-group-2.png" alt="gambar-2">
+    </div>
+    <p class="nama-lk">Dian</p>
+    <p class="putra">
+    Bin budiman <br> Bin gusti </p>
+
+    <div class="musik">
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+      </div>
+    </audio>
+      <script>
+      window.onload = function() {
+        const audio = document.getElementById('background-music');
+        const savedTime = localStorage.getItem('music-time');
+      
+        if (savedTime) {
+          audio.currentTime = savedTime;
+        }
+      
+        audio.addEventListener('timeupdate', function() {
+          localStorage.setItem('music-time', audio.currentTime);
+        });
+      };
+      </script>
+
+
+    <footer>
+        <a href="index.html"> <img src="Vector-home.svg" alt="cover" class="icon"></a>
+        <div class="pilih"><img src="ikon cover.svg" alt="home" class="icon-choose"></div>
+        <a href="acara.html"><img src="vector-acara.svg" alt="acara" class="icon"></a>
+        <a href="lokasi.html"><img src="vector-lokasi.svg" alt="lokasi" class="icon"></a>
+        <a href="galery.html"><img src="vector-galery.svg" alt="galery"  class="icon"></a>
+        <a href="video.html"><img src="vector-video.svg" alt="video"   class="icon"></a>
+        <a href="rsvp.html"><img src="logo rsvp.svg" alt="rsvp" class="icon"></a>
+        <a href="penutup.html"><img src="vector-penutup.svg" alt="penutup" class="icon"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dalam acara</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="containerluar-akad">
+  <div class="container-akad">
+    <div class="akad-nikah">
+    <p class="akad">Akad Nikah:</p>
+    <p class="tanggal-1"><b><u>Hari Tanggal </u></b>:  Jumat, 05 januari 2031</p>
+    <P class="jam-1"><b><u>Jam </u></b>: 09:00 - selesai</P>
+    <p class="alamat-1"><b><u>Tempat </u> </b>: Masjid raya sabilal muhtadin. Jl. Jend Sudirman No.1, Antasan Besar, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan 70114</p>
+    <a href="https://maps.app.goo.gl/XfhyL3pymVSCMhXE8" class="alamat"><p>Lokasi Akad</p></a>
+</div>
+</div>
+</div>
+<div class="containerluar-resepsi">
+<div class="container-resepsi">
+<div class="resepsi-pernikahan">
+    <p class="resepsi">Resepsi:</p>
+    <p class="tanggal-2"><b><u>Hari Tanggal</u></b>: Sabtu, 16 juli 2031</p>
+    <P class="jam-2"><b><u>Jam</u></b> : 09:00 - selesai</P>
+    <p class="alamat-2"><b><u>Tempat</u></b>: GSG Universitas Lambung Mangkurat. No. Jalan unlam No.12 Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</p>
+   </div>
+  </div>
+</div>
+   <script src="script.js"></script>
+    <div class="container-kotakputih">
+    <div class="containercountdown-kotak">
+<div class="countdown-container">
+     <P class="count-down">Countdown Pernikahan:</P>    
+    <div class="cntdwn">
+        <div class="time" id="hari">39 <span>Hari</span></div>
+        <div class="time" id="jam">42 <span>Jam</span></div>
+        <div class="time" id="menit">29 <span>Menit</span></div>
+        <div class="time" id="detik">57 <span>Detik</span></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="musik">
+<audio id="background-music"autoplay loop >
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.ogg" type="audio/ogg">
+  </div>
+</audio>
+  <script>
+  window.onload = function() {
+    const audio = document.getElementById('background-music');
+    const savedTime = localStorage.getItem('music-time');
+  
+    if (savedTime) {
+      audio.currentTime = savedTime;
+    }
+  
+    audio.addEventListener('timeupdate', function() {
+      localStorage.setItem('music-time', audio.currentTime);
+    });
+  };
+  </script>
+    <footer>
+        <a href="index.html"> <img src="Vector-home.svg" alt="cover" class="icon"></a>
+        <a href="btn-opening.html"><img src="ikon cover.svg" alt="home" class="icon"></a>
+        <div class="pilih"><img src="vector-acara.svg" alt="acara" class="icon-choose"></div>
+        <a href="lokasi.html"><img src="vector-lokasi.svg" alt="lokasi" class="icon"></a>
+        <a href="galery.html"><img src="vector-galery.svg" alt="galery"  class="icon"></a>
+        <a href="video.html"><img src="vector-video.svg" alt="video"   class="icon"></a>
+        <a href="rsvp.html"><img src="logo rsvp.svg" alt="rsvp" class="icon"></a>
+        <a href="penutup.html"><img src="vector-penutup.svg" alt="penutup" class="icon"></a>
+    </footer>
+
+</body>
+</html>
